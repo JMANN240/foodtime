@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <h1>chris was here</h1>
     {% for location in data['locations'] %}
     <div class=location_container>
         <h1 id="{{location|replace(' ', '_')}}_header" class="unselectable" onClick="{{location|replace(' ', '_')}}_header_toggle()">{{location}}</h1>
