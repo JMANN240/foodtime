@@ -35,4 +35,5 @@ jobs:
           passphrase: ${{ secrets.KEY_PASSPHRASE }}
           script: |
             echo "Hey this is run on the server!"
-            ls
+            pwd
+            exit
