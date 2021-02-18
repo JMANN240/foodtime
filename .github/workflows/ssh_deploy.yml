@@ -34,6 +34,13 @@ jobs:
           port: ${{ secrets.PORT }}
           passphrase: ${{ secrets.KEY_PASSPHRASE }}
           script: |
-            echo "Hey this is run on the server!"
-            pwd
+            cd /var/www/foodtime
+            echo "Fetching changes from Github"
+            git fetch
+            echo "Pulling Changes from Github"
+            git pull
+            echo "Restarting Application"
+            service foodtime restart
+            echo "Finished"
             exit
+            
