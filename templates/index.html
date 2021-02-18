@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>FoodTime</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" type="text/css">
+</head>
+
+<body>
+    <h1 id=header>FoodTime</h1>
+    {% for location in data['locations'] %}
+    <div class=location_container>
+        <h1 id="{{location|replace(" ", "_")}}_header" class="unselectable" onClick="{{location|replace(" ", "_")}}_header_toggle()">{{location}}▼</h1>
+        <h2>{{data['locations'][location]['macs']|length}} people</h2>
+        <div class="macs_container" id="{{location|replace(" ", "_")}}_macs">
+            {% for mac in data['locations'][location]['macs'] %}
+            <h6>{{mac}}</h6>
+            {% endfor %}
+        </div>
+        <h3>Last updated {{data['locations'][location]['last_updated']}}</h3>
+    </div>
+    {% endfor %} {% if jt %}
+    <p>JT is here</p>
+    {% endif %}
+    <script>
+    {% for location in data['locations'] %}
+        function {{location|replace(" ", "_")}}_header_toggle() {
+            console.log(document.getElementById('{{location|replace(" ", "_")}}_macs').style.display);
+            if (document.getElementById('{{location|replace(" ", "_")}}_macs').style.display == "") {
+                document.getElementById('{{location|replace(" ", "_")}}_macs').style.display = "inline-block";
+                document.getElementById('{{location|replace(" ", "_")}}_header').innerHTML = "{{location}}▲";
+            } else if (document.getElementById('{{location|replace(" ", "_")}}_macs').style.display == "inline-block") {
+                document.getElementById('{{location|replace(" ", "_")}}_macs').style.display = "";
+                document.getElementById('{{location|replace(" ", "_")}}_header').innerHTML = "{{location}}▼";
+            }
+        }
+    {% endfor %}
+    </script>
+</body>
+
+</html>

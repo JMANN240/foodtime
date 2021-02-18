@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+* {
+    margin: 0px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    text-align: center;
+}
+
+@media all and (orientation:landscape) {
+    #header {
+        font-weight: 700;
+        font-size: 8vh;
+        padding: 2vh 0px;
+        background-color: #003976;
+        color: #FFFFFF;
+        border-bottom: 0.5vh solid #EFAB00;
+    }
+    .location_container {
+        width: 50vw;
+        margin: 2vh 25vw;
+        border: 2px solid #4994CB;
+    }
+    .location_container * {
+        font-weight: 400;
+        padding: 1vw;
+        color: #000000;
+    }
+    .location_container h1 {
+        font-weight: 600;
+        background-color: #4994CB;
+        color: #FFFFFF;
+        text-align: left;
+        font-size: 6vw;
+    }
+    .location_container h2 {
+        font-size: 4vw;
+    }
+    .location_container h3 {
+        font-size: 2vw;
+    }
+    .location_container h6 {
+        font-size: 1vw;
+        padding: 0px;
+    }
+    .macs_container {
+        display: none;
+    }
+    .unselectable {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+}
+
+@media all and (orientation:portrait) {
+    #header {
+        font-weight: 700;
+        font-size: 8vh;
+        padding: 2vh 0px;
+        background-color: #003976;
+        color: #FFFFFF;
+        border-bottom: 0.25vh solid #EFAB00;
+    }
+    .location_container {
+        width: 80vw;
+        margin: 2vh 10vw;
+        border: 2px solid #4994CB;
+        font-size: 3vh;
+    }
+    .location_container * {
+        font-weight: 400;
+        padding: 1vw;
+        color: #000000;
+    }
+    .location_container h1 {
+        font-weight: 600;
+        background-color: #4994CB;
+        color: #FFFFFF;
+        text-align: left;
+    }
+    .location_container h3 {
+        font-size: 1vh;
+    }
+}

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+* {
+    margin: 0px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.location_container {
+    width: 30vw;
+    margin: 2vh 1vw;
+    border: 2px solid #4994CB;
+}
+
+.location_container * {
+    font-weight: 400;
+    color: #000000;
+}
+
+.location_container h1,
+.location_container h2,
+.location_container h3 {
+    padding: 1vw;
+}
+
+.location_chart {
+    width: 30vw;
+    height: 15vw;
+    margin: 0px;
+    padding: 0px;
+}
+
+.location_container h1 {
+    font-weight: 600;
+    background-color: #4994CB;
+    color: #FFFFFF;
+    text-align: left;
+    font-size: 4vw;
+}
+
+.location_container h2 {
+    font-size: 4vw;
+}
+
+.location_container h3 {
+    font-size: 2vw;
+}
+
+.location_container h6 {
+    font-size: 1vw;
+    padding: 0px;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
